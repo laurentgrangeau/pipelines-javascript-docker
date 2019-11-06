@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: laurentgrangeaupipelinesjavascriptdocker
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  - host: devoxxma.e3bf473bdbaa40cd9fd0.westeurope.aksapp.io
+    http:
+      paths:
+      - backend:
+          serviceName: laurentgrangeaupipelinesjavascriptdocker
+          servicePort: 8080
+        path: /
