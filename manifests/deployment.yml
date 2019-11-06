@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: laurentgrangeaupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: laurentgrangeaupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: laurentgrangeaupipelinesjavascriptdocker 
+          image: devoxxma.azurecr.io/laurentgrangeaupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
